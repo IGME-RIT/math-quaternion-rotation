@@ -1,8 +1,8 @@
 /*
-Title: Matrix Mathematics
+Title: Quaternion Mathematics
 File Name: main.cpp
 Copyright © 2016
-Author: Andrew Litfin
+Author: Parth Contractor
 Written under the supervision of David I. Schwartz, Ph.D., and
 supported by a professional development seed grant from the B. Thomas
 Golisano College of Computing & Information Sciences
@@ -67,6 +67,11 @@ int main()
 
 	std::cout << "The angle between the two Quaternions is: " << std::endl;
 	std::cout << AngleBetweenQuaternions(q, l) << std::endl;
+
+	std::cout << "Generate a rotation quaternion from the given vector and angle" << std::endl;
+	Quaternion rotationQuaternion = Rotation(Vector3D(0, 0, 1), 3.14);
+	std::cout << "The rotation quaternion is: " << std::endl;
+	std::cout << rotationQuaternion << std::endl;
 
 	std::cin.get();
 }
